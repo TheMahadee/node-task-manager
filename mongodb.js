@@ -98,7 +98,48 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
         console.log(tasks)
     }) */
 
-    //
+    //Update
+    /*
+    db.collection('users').updateOne({
+        _id: new ObjectID("6033ca29b3f971289052770e")
+    }, {
+        $inc: {
+            age: 1,
+        }
+    }).then((result) => {
+        console.log(result)
+    }).catch((error) => {
+        console.log(error)
+    }) 
 
+    db.collection('tasks').updateMany({
+        completed: false
+    }, {
+        $set: {
+            completed: true,
+        }
+    }).then((result) => {
+        console.log(result)
+    }).catch((error) => {
+        console.log(error)
+    }) */
+
+    //Delete
+    /* 
+    db.collection('users').deleteMany({
+        age: 23,
+    }).then((result) => {
+        console.log(result)
+    }).catch((error) => {
+        console.log(error)
+    }) */
+
+    db.collection('tasks').deleteOne({
+        description: 'Task 2',
+    }).then((result) => {
+        console.log(result)
+    }).catch((error) => {
+        console.log(error)
+    })
 
 })

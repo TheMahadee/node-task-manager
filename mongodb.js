@@ -132,7 +132,7 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
         console.log(result)
     }).catch((error) => {
         console.log(error)
-    }) */
+    }) 
 
     db.collection('tasks').deleteOne({
         description: 'Task 2',
@@ -140,6 +140,6 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
         console.log(result)
     }).catch((error) => {
         console.log(error)
-    })
+    })  */
 
 })

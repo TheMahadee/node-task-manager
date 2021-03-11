@@ -45,6 +45,17 @@ const userSchema = new mongoose.Schema({
     }],
 })
 
+//Restrics User data for response
+userSchema.methods.toJSON = function() {
+    const user = this
+    const userPublicData = user.toObject()
+
+    delete userPublicData.password
+    delete userPublicData.tokens
+
+    return userPublicData
+}
+
 //JSON WEB TOKEN
 userSchema.methods.generateAuthToken = async function() {
     const user = this

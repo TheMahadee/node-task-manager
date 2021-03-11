@@ -19,3 +19,9 @@ app.listen(port, () => {
     console.log('Server is up on port ' + port)
     console.log('--------------------------------------------------CONSOLE--------------------------------------------------------------')
 })
+
+const pet = {
+    name: 'Bee'
+}
+
+console.log(JSON.stringify(pet))

@@ -20,8 +20,19 @@ app.listen(port, () => {
     console.log('--------------------------------------------------CONSOLE--------------------------------------------------------------')
 })
 
-const pet = {
-    name: 'Bee'
-}
 
-console.log(JSON.stringify(pet))
+//Use populate and execPopulate
+// const Task = require('./models/task')
+// const User = require('./models/user')
+
+// const temp = async() => {
+//     // const task = await Task.findById('6057516d3a8cf315a00291be')
+//     // await task.populate('owner').execPopulate()
+//     // console.log(task.owner)
+
+//     const user = await User.findById('60574f981ec5881c782d488d')
+//     await user.populate('tasks').execPopulate()
+//     console.log(user.tasks)
+// }
+
+// temp()
